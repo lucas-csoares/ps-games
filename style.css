@@ -1,0 +1,344 @@
+/*CABEÇALHO*/
+
+.header {
+    background: rgb(36, 34, 34);
+    margin-bottom: 0px;
+    min-height: 100px;
+}
+
+
+
+.header nav {
+    position: absolute;
+    top: 30px;
+    right: 1%;
+
+}
+
+.nav a {
+    color: white;
+    margin-right: 15px;
+}
+
+.header nav a:hover {
+    /*Quando o mouse passa por cima (:hover) do menu de navegação*/
+    background-color: rgb(46, 199, 59);
+}
+
+
+.navbar {
+    display: none;
+}
+
+
+
+
+
+
+
+
+/*CONTEÚDO*/
+
+
+
+.justify-content-end {
+    position: absolute;
+    top: 40px;
+    left: 60%;
+    margin-left: 0;
+}
+
+.banner .videos {
+    width: 100%;
+    height: 100%;
+}
+
+
+.banner {
+    height: 35rem;
+    padding: 0.5rem 5rem 5rem 5rem;
+}
+
+.banner iframe {
+    width: 100%;
+}
+
+
+.destaque {
+    background: #ccc;
+
+}
+
+
+.destaque div:first-child {
+    display: flex;
+    justify-content: center;
+    color: rgb(44, 44, 143)
+}
+
+
+
+.justify-content-end a {
+    color: white;
+}
+
+.logo {
+    max-width: 80px;
+    margin-top: 10px;
+
+}
+
+
+
+
+.plataformas {
+    margin-top: 15px;
+}
+
+.plataformas-titulo div {
+    font-size: 40px;
+}
+
+
+.plataformas img {
+    width: 70%;
+    margin: 0px 10px;
+}
+
+
+.plataformas h4 {
+    font-size: 15px;
+}
+
+
+/*PUBLISHERS*/
+
+.publishers li {
+    font-size: 25px;
+    color: rgb(36, 34, 34);
+}
+
+.publishers a {
+    display: block;
+    max-width: 50%;
+}
+
+
+.publicacoes {
+    display: absolute;
+    margin: 0px 0px;
+    background: #ccc;
+
+}
+
+.lancamentos-video2 {
+    margin-top: 30px
+}
+
+
+
+
+.publishers-titulo {
+    margin-top: 80px;
+}
+
+
+
+
+.quadro1 .card {
+    position: absolute;
+    margin-top: 10px;
+    max-height: 900px;
+    max-width: 400px;
+}
+
+.quadro2 .card {
+    position: absolute;
+    margin-top: 8px;
+    max-height: 900px;
+    max-width: 400px;
+}
+
+
+.quadro3 .card {
+    position: relative;
+    max-height: 900px;
+    margin-top: 20px;
+    max-width: 400px;
+    margin-bottom: 80px;
+}
+
+
+
+
+.publishers h4 {
+    font-size: 1.8em;
+    color: rgb(224, 106, 28);
+    margin-top: 30px;
+}
+
+.quadro1 h4 {
+    margin-top: 20px
+}
+
+/*Sobre e redes sociais*/
+
+
+.infos {
+    padding-top: 20px;
+    margin-top: 10px;
+    color: black;
+    margin-bottom: 20px;
+
+}
+
+.infos h5 {
+    font-size: 1.4em;
+}
+
+.footer {
+    background: rgb(36, 34, 34);
+    color: white;
+    padding: 20px;
+    min-height: 100px;
+    margin-bottom: 10px;
+
+}
+
+.footer img {
+    margin-bottom: 2px;
+    left: 90%;
+    max-width: 80px;
+
+}
+
+.footer .area1 .paragrafo {
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+/*Menu Mobile - Início*/
+
+#menuToggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+
+
+
+    .destaque {
+        margin-top: 100px;
+        padding-bottom: 0px;
+    }
+
+    .banner .videos {
+        width: 500px;
+        /*Ajustar em mais vídeos*/
+        height: 300px;
+    }
+
+
+    .nav {
+        display: none;
+    }
+
+
+
+    .container_nav {
+        display: absolute;
+        width: 100%;
+        height: 100%;
+    }
+
+    .main {
+        margin-top: 140px;
+    }
+
+
+    .footer p {
+        display: none;
+    }
+
+    .detaque {
+        display: absolute;
+        margin-top: 80px;
+    }
+
+    .justify-content-end {
+        display: flex;
+        position: fixed;
+        flex-wrap: wrap;
+        align-content: center;
+        top: 0px;
+        left: 320px;
+        width: 100%;
+        height: 0%;
+        background-color: rgba(0, 0, 0, 0.7);
+        overflow: hidden;
+        -webkit-transition: height 0.3s;
+        -moz-transition: height 0.3s;
+        -ms-transition: height 0.3s;
+        -o-transition: height 0.3s;
+        transition: height 0.3s;
+    }
+
+    .justify-content-end a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .menu-icon {
+        width: 50px;
+        height: inherit;
+        display: block;
+        position: absolute;
+        top: 55px;
+        right: 30px;
+        line-height: 60px;
+        color: white;
+        z-index: 999;
+    }
+
+    #menuToggle:checked~label i:nth-child(2) {
+        display: block;
+    }
+
+    #menuToggle:checked~label i:first-child {
+        display: none;
+    }
+
+    #menuToggle:not(:checked)~label i:first-child {
+        display: block;
+    }
+
+    #menuToggle:not(:checked)~label i:nth-child(2) {
+        display: none;
+    }
+
+    #menuToggle:checked~nav {
+        height: 100%;
+    }
+
+    .menu-icon i {
+        font-size: 1.7em;
+    }
+}
