@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <title>PSDetalhes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--link CSS para instação do Bootstrap-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/fb3ec08320.js" crossorigin="anonymous"></script>
+    <!--icones de redes sociais-->
+    <link rel="stylesheet" href="style_detalhes.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+
+
+    <!--Cabeçalho-->
+
+    <header class="container-fluid header">
+
+
+
+
+        <a href="index.html"><img src="imagens/logo.png" class="logo"></a>
+
+
+
+        <div class="container_nav">
+
+
+
+            <nav class="nav">
+
+                <input type="checkbox" id="menuToggle">
+                <label for="menuToggle" class="menu-icon">
+                    <i class="fa fa-bars barra"></i>
+                    <i class="fa fa-times-circle"></i>
+                </label>
+
+                <ul class="menu">
+                    <li><a class="nav-link active" href="index.html">HOME</a></li>
+                    <li><a class="nav-link" href="#">LANÇAMENTOS</a></li>
+                    <li><a class="nav-link" href="#">PLATAFORMAS</a></li>
+                    <li><a class="nav-link" href="#">PUBLISHERS</a></li>
+                </ul>
+
+
+                <form class="form-inline" id="formulario">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search">Pesquisar</button>
+                </form>
+
+            </nav>
+
+
+
+
+        </div>
+
+
+
+
+
+    </header>
+
+
+
+
+    <main class="container-fullwidth main">
+        <!--Full width "abraça" largura total-->
+
+        <div class="row" id="banner">
+        </div>
+
+        <div class="row" id="imagens">
+        </div>
+
+    </main>
+
+
+
+    <footer class="container-fluid footer">
+
+        <div class="d-flex flex-row justify-content-between area1">
+
+            <div class="col-8 col-sm-8 col-md-11 col-lg-11 paragrafo">
+                <p>Copyright 2022 - Disiciplina de Desenvolvimento de interfaces Web - ICEI PUC Minas</p>
+
+            </div>
+
+            <div class="col-4 col-sm-4 col-md-1 col-lg-1 logo_rodape">
+                <img src="imagens/logo.png" alt="logo_rodape">
+            </div>
+
+        </div>
+
+
+
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+    <!--Link JS para instalação do Bootstrap-->
+
+
+    <script>
+        const urlParams = new URLSearchParams(location.search);
+        let idJogo = parseInt(urlParams.get('id'));
+        carregaJogo(idJogo);
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-
+J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-
+Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-
+wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

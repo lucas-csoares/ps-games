@@ -11,10 +11,17 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/fb3ec08320.js" crossorigin="anonymous"></script>
     <!--icones de redes sociais-->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_home.css">
 </head>
 
 <body>
+
+    <script>
+        document.body.onload = function carregar() {
+            lancamentos();
+            publishers();
+        }
+    </script>
 
     <!--Cabeçalho-->
 
@@ -23,7 +30,7 @@
 
 
 
-        <img src="imagens/logo.png" class="logo">
+        <a href="index.html"><img src="imagens/logo.png" class="logo"></a>
 
 
 
@@ -33,16 +40,24 @@
 
             <nav class="nav">
 
-                <a class="nav-link active" href="#">DESTAQUES</a>
-                <a class="nav-link" href="#">LANÇAMENTOS</a>
-                <a class="nav-link" href="#">PLATAFORMAS</a>
-                <a class="nav-link" href="#">PUBLISHERS</a>
+                <input type="checkbox" id="menuToggle">
+                <label for="menuToggle" class="menu-icon">
+                    <i class="fa fa-bars barra"></i>
+                    <i class="fa fa-times-circle"></i>
+                </label>
+
+                <ul class="menu">
+                    <li><a class="nav-link active" href="index.html">HOME</a></li>
+                    <li><a class="nav-link" href="#">LANÇAMENTOS</a></li>
+                    <li><a class="nav-link" href="#">PLATAFORMAS</a></li>
+                    <li><a class="nav-link" href="#">PUBLISHERS</a></li>
+                </ul>
 
 
-
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+                <form class="form-inline" id="formulario">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                        id="inputPesquisa" />
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="pesquisar">Pesquisar</button>
                 </form>
 
             </nav>
@@ -51,61 +66,6 @@
 
 
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <div class="col-12 col-sm-12 col-md-3 col-lg-3 navbar">
-
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-                    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <a class="navbar-brand" href="#">Hidden brand</a>
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">DESTAQUES<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">LANÇAMENTOS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">PLATAFORMAS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">PUBLISHERS</a>
-                        </li>
-
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
-                    </form>
-
-
-
-                </div>
-
-            </nav>
-
-        </div>
-
-
-
 
 
 
@@ -122,7 +82,7 @@
 
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 
-                <h1>Destaque</h1>
+                <h1><strong>Destaque</strong></h1>
 
             </div>
 
@@ -135,7 +95,7 @@
 
         <div class="row banner">
 
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 video">
 
                 <iframe width="560" height="500" src="https://www.youtube.com/embed/u4-FCsiF5x4"
                     title="YouTube video player" frameborder="0"
@@ -144,7 +104,7 @@
 
             </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 texto_video">
                 <h2>Horizon Zero Dawn</h2>
                 <p><strong>Sobre:</strong> Horizon Zero Dawn é um jogo eletrônico de RPG de ação pós-apocalíptico em um
                     mundo aberto, desenvolvido pela Guerrilla Games (publicado pela Sony Interactive Entertainment),
@@ -156,7 +116,7 @@
                 <p><strong>Lançamentos:</strong> Horizon Zero Dawn™ Complete Edition on Steam</p>
                 <p><strong>Plataformas:</strong> Playstation 5</p>
                 <p><strong>Gênero:</strong> Aventura</p>
-                <p><strong>Avaliação:</strong> 50</p>
+                <p><strong>Avaliação:</strong> 9,5</p>
 
             </div>
 
@@ -178,122 +138,25 @@
 
         <section class="row lancamentos-titulo">
 
-            <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12">
+            <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12 titulo-lancamento">
 
-                <h1>Lançamentos</h1>
+                <h1><strong>Lançamentos</strong></h1>
 
             </div>
         </section>
 
 
+        <!--INÍCIO - LANÇAMENTOS-->
 
-
-        <section class="row lancamentos-video1">
-
-
-
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-
-                <h4>Spider Man</h4>
-                <iframe width="180px" height="150px" src="https://www.youtube.com/embed/qIQ3xNqkVC4"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <button type="button" class="btn btn-dark">Mais informações</button>
-
-
-
-            </div>
-
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-
-                <h4>Residente Evil</h4>
-                <iframe width="180px" height="150px" src="https://www.youtube.com/embed/9iy6gHDKvzA"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <button type="button" class="btn btn-dark">Mais informações</button>
-
-
-
-            </div>
-
-
-
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-
-                <h4>Need for Speed</h4>
-                <iframe width="180px" height="150px" src=" https://www.youtube.com/embed/iujvXC7nOgE"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <button type="button" class="btn btn-dark">Mais informações</button>
-
-
-
-            </div>
-
-
-
-            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-
-                <h4>Ratchet & Clank</h4>
-                <iframe width="180px" height="150px" src="https://www.youtube.com/embed/ai3o0XtrnM8"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <button type="button" class="btn btn-dark">Mais informações</button>
-
-
-
-
-            </div>
-
-
+        <section class="row" id="lancamentos">
         </section>
 
-
-        <section class="row lancamentos-video2">
-
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <h4>Uncharted: Legacy</h4>
-                <iframe width="180px" height="150px" src="https://www.youtube.com/embed/F3Wl-OiZCO4"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <button type="button" class="btn btn-dark">Mais informações</button>
-
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <h4>Fifa 22</h4>
-                <iframe width="180px" height="150px" src=" https://www.youtube.com/embed/wC-AGjMoRa4"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <button type="button" class="btn btn-dark">Mais informações</button>
-
-
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-                <h4>Crash Bandicoot</h4>
-                <iframe width="180px" height="150px" src="https://www.youtube.com/embed/F7G91RjVmvk"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                <button type="button" class="btn btn-dark">Mais informações</button>
-
-            </div>
-
-
-        </section>
-
+        <!--FIM - LANÇAMENTOS-->
 
         <section class="row plataformas-titulo">
 
-            <div class="col-12 col-sm-3 col-md-3 col-lg-3">
-                <h4>Plataformas</h4>
+            <div class="col-12 col-sm-3 col-md-3 col-lg-3 titulo-plataforma">
+                <h4><strong>Plataformas</strong></h4>
             </div>
         </section>
 
@@ -302,7 +165,7 @@
         <section class="row plataformas">
 
 
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 card-plataforma1">
                 <h4>Playstation</h4>
                 <div class="card">
                     <img class="card-img-top" src=" imagens/plataformaA.jpg">
@@ -310,12 +173,12 @@
                         <h5 class="card-title">Playstation - Principais Jogos</h5>
                         <p class="card-text">
                         <ul>
-                            <li>The Last Of Us</li>
-                            <li>Uncharted Legacy</li>
-                            <li>Need For Speed</li>
+                            <li><strong>Last Of Us</strong></li>
+                            <li><strong>Uncharted Legacy</strong></li>
+                            <li><strong>Need For Speed</strong></li>
                         </ul>
                         </p>
-                        <a href="#" class="btn btn-dark">Saiba mais</a>
+                        <a href="#" class="btn btn-primary">Saiba mais</a>
                     </div>
                 </div>
 
@@ -324,7 +187,7 @@
 
 
 
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 card-plataforma2">
                 <h4>XBox</h4>
                 <div class="card">
                     <img class="card-img-top" src="imagens/plataformaB.jpg">
@@ -332,12 +195,12 @@
                         <h5 class="card-title">XBox - Principais Jogos</h5>
                         <p class="card-text">
                         <ul>
-                            <li>Forza Horizon 5</li>
-                            <li>Halo Infinite</li>
-                            <li>Flight Simulator</li>
+                            <li><strong>Forza Horizon 5</strong></li>
+                            <li><strong>Halo Infinite</strong></li>
+                            <li><strong>Flight Simulator</strong></li>
                         </ul>
                         </p>
-                        <a href="#" class="btn btn-dark">Saiba mais</a>
+                        <a href="#" class="btn btn-primary">Saiba mais</a>
                     </div>
                 </div>
 
@@ -345,7 +208,7 @@
 
             </div>
 
-            <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-4 card-plataforma3">
                 <h4>PC</h4>
                 <div class="card">
                     <img class="card-img-top" src=" imagens/plataformaC.jpg">
@@ -353,12 +216,12 @@
                         <h5 class="card-title">PC - Principais Jogos</h5>
                         <p class="card-text">
                         <ul>
-                            <li>Counter Strike: Global Offensive</li>
-                            <li>League of Legends</li>
-                            <li>Teamfight Tatics</li>
+                            <li><strong>Counter Strike: Global Offensive</strong></li>
+                            <li><strong>League of Legends</strong></li>
+                            <li><strong>Teamfight Tatics</strong></li>
                         </ul>
                         </p>
-                        <a href="#" class="btn btn-dark">Saiba mais</a>
+                        <a href="#" class="btn btn-primary">Saiba mais</a>
                     </div>
                 </div>
 
@@ -376,84 +239,15 @@
 
     <section class="container-fluid publicacoes">
 
-        <div class="row publishers-titulo">
+        <div class="row">
 
-            <div class="col-12 col-sm-3 col-md-3 col-lg-3">
-                <h4>Publishers</h4>
+            <div class="col-12 col-sm-3 col-md-3 col-lg-3 titulo-publishers">
+                <h4><strong>Publishers</strong></h4>
             </div>
         </div>
 
 
-
-
-
-
-        <div class="row publishers">
-
-
-
-
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 quadro1">
-                <h4><strong>Naughty Dog</strong></h4>
-                <div class="card">
-                    <img class="card-img-top" src="imagens/publisher1.jpg">
-                    <div class="card-body">
-                        <h5 class="card-title">Principais Jogos</h5>
-                        <p class="card-text">
-                        <ul>
-                            <li>Uncharted</li>
-                            <li>The Lost Legacy</li>
-                            <li>Jak and Dexter</li>
-                        </ul>
-                        </p>
-                        <a href="#" class="btn btn-dark">Saiba mais</a>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 quadro2">
-                <h4><strong>Square Enix</strong></h4>
-                <div class="card">
-                    <img class="card-img-top" src="imagens/publisher2.jpg">
-                    <div class="card-body">
-                        <h5 class="card-title">Principais Jogos</h5>
-                        <p class="card-text">
-                        <ul>
-                            <li>Chrono Trigger</li>
-                            <li>SaGA</li>
-                            <li>Mana</li>
-                        </ul>
-                        </p>
-                        <a href="#" class="btn btn-dark">Saiba mais</a>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 quadro3">
-                <h4><strong>EA Games</strong></h4>
-                <div class="card">
-                    <img class="card-img-top" src="imagens/publisher3.png">
-                    <div class="card-body">
-                        <h5 class="card-title">Principais Jogos</h5>
-                        <p class="card-text">
-                        <ul>
-                            <li>Battlefiel 3</li>
-                            <li>Dead Space</li>
-                            <li>The Sim 2</li>
-                        </ul>
-                        </p>
-                        <a href="#" class="btn btn-dark">Saiba mais</a>
-                    </div>
-                </div>
-
-
-            </div>
-
-
+        <div class="row" id="publishers">
         </div>
 
 
@@ -478,9 +272,9 @@
 
 
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-                <p><i class="fa-solid fa-quote-right fa-xl"></i><b> Redação:</b> Lucas Cabral</p>
-                <p><i class="fa-solid fa-lightbulb fa-xl"></i><b> Pesquisa:</b> Lucas Cabral</p>
-                <p><i class="fa-solid fa-user-tie fa-xl"></i><b> Gerente geral:</b> Lucas Cabral</p>
+                <p><i class="fa-solid fa-quote-right fa-xl"></i><b> Aluno: </b> Lucas Cabral Soares</p>
+                <p><i class="fa-solid fa-lightbulb fa-xl"></i><b> Curso: </b> Bacharelado em Engenharia de Software</p>
+                <p><i class="fa-solid fa-user-tie fa-xl"></i><b> Matrícula: </b>790404</p>
                 <div class="socialmedia">
                     <h5>redes sociais:</h5>
                     <i class="fa-brands fa-whatsapp fa-2xl"></i> <i class="fa-brands fa-instagram fa-2xl"></i>
@@ -536,6 +330,8 @@
 
 
     <!--Link JS para instalação do Bootstrap-->
+
+    <script src="script.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-
 J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
