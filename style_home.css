@@ -459,18 +459,20 @@ body {
 
 
     .publicacoes {
-        height: 4200px;
+        height: 4300px;
     }
 
     .destaque {
         margin-top: 0px;
-        height: 1150px;
+        height: 1600px;
 
     }
 
     .destaque .texto_video {
         position: relative;
-        top: 30px
+        top: 30px;
+        width: 100%;
+        font-size: 1.1em;
     }
 
 
