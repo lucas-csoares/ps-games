@@ -145,8 +145,8 @@ function carregaJogo(id) {
         for(let j = 0; j<data.genres.length; j++) {
             genero[j] = data.genres[j].name;
         }
-        for(let j = 0; j<data.metacritic_platforms.length; j++) {
-            plataformas[j] = data.metacritic_platforms[j].platform.name
+        for(let j = 0; j<data.platforms.length; j++) {
+            plataformas[j] = data.platforms[j].platform.name
         }
         str1 += ` <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 imagem_game">
         <img class="card-img-top" src="${game.background_image}" alt="Card image cap" style="width: 100%; height: 100%">

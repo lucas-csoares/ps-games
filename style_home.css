@@ -46,27 +46,25 @@
 }
 
 
+body {
+    overflow-x: hidden;
+    background-color: rgb(161, 161, 187);
+    /*Removendo barra horizontal*/
+}
 
 
 
 /*CONTEÚDO*/
 
 
-body {
-    background-color: rgb(161, 161, 187);
-}
+
 
 
 
 
 /*DESTAQUE*/
 
-.justify-content-end {
-    position: absolute;
-    top: 40px;
-    left: 60%;
-    margin-left: 0;
-}
+
 
 .banner .videos {
     width: 100%;
@@ -97,10 +95,6 @@ body {
 }
 
 
-
-.justify-content-end a {
-    color: white;
-}
 
 .logo {
     max-width: 80px;
@@ -224,40 +218,9 @@ body {
 
 
 
-.quadro1 .card {
-    position: absolute;
-    margin-top: 10px;
-    max-height: 900px;
-    max-width: 400px;
-}
-
-.quadro2 .card {
-    position: absolute;
-    margin-top: 8px;
-    max-height: 900px;
-    max-width: 400px;
-}
-
-
-.quadro3 .card {
-    position: relative;
-    max-height: 900px;
-    margin-top: 20px;
-    max-width: 400px;
-    margin-bottom: 80px;
-}
 
 
 
-
-.publishers h4 {
-    font-size: 1em;
-    margin-top: 30px;
-}
-
-.quadro1 h4 {
-    margin-top: 20px
-}
 
 /*Sobre e redes sociais*/
 
@@ -316,6 +279,13 @@ body {
 
 
 @media screen and (min-width: 580px) and (max-width: 800px) {
+
+    .destaque,
+    header {
+        position: relative;
+        margin: auto 0px
+    }
+
     .destaque {
         margin-top: 0px;
         height: 1100px;
@@ -452,6 +422,19 @@ body {
 
 @media screen and (min-width: 100px) and (max-width: 579px) {
 
+    .destaque,
+    header {
+        position: relative;
+        margin: auto 0px
+    }
+
+    .destaque {
+        margin-top: 0px;
+        height: 1000px;
+
+    }
+
+
     body {
         overflow-x: hidden;
         /*Removendo barra horizontal*/
@@ -459,7 +442,7 @@ body {
 
 
     .publicacoes {
-        height: 4300px;
+        height: 4400px;
     }
 
     .destaque {
