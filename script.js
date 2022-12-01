@@ -9,6 +9,7 @@ function lancamentos() {
     .then(res => res.json())
     .then(data => {
     let str = '';
+    titulo.innerHTML = "Lançamentos";
     for (let i = 0; i < data.results.length; i++) {
         let jogo = data.results[i];
         str += `<div class="card col-12 col-sm-6 col-md-3 col-lg-3 card-lancamento" style="width: 18rem; background-color: rgb(42, 42, 51); color: white; margin: 5px 5px;">
@@ -72,14 +73,19 @@ function publishers() {
 
 let input_pesquisa = document.querySelector('#inputPesquisa');
 let btn_pesquisa = document.querySelector('#pesquisar');
+let titulo = document.getElementById('tituloLancamento');
 
 btn_pesquisa.addEventListener('click', (e) => {
     e.preventDefault();
-    fetch('https://api.rawg.io/api/games?key=3e95d14eba0041408bb86ffc5134af80')
+    fetch(`https://api.rawg.io/api/games?key=965cf8a1fa7f420387e453ca63050020&search=${$("#inputPesquisa").val()}`)
     .then((resposta) => resposta.json())
     .then((data) => {
       let str = '';
 
+      if(data.results.length==0) {
+        titulo.innerHTML = `Nenhum resultado`;
+      }
+      else {
       for (let i = 0; i < data.results.length; i++) {
         let jogo = data.results[i];
         var generos = [];
@@ -94,11 +100,8 @@ btn_pesquisa.addEventListener('click', (e) => {
           plataformas.push(data.results[i].platforms[l].platform.name);
         }
 
-        if (
-          jogo.name == input_pesquisa.value ||
-          generos.includes(input_pesquisa.value) ||
-          plataformas.includes(input_pesquisa.value)
-        ) {
+         {
+            titulo.innerHTML = `Pesquisa "${$("#inputPesquisa").val()}"`;
             str += `<div class="card col-12 col-sm-6 col-md-3 col-lg-3 card-lancamento" style="width: 18rem; background-color: rgb(42, 42, 51); color: white; margin: 5px 5px;">
           <img class="card-img-top" src="${jogo.background_image}" alt="Card image cap" style="width: 100%;">
           <div class="card-body">
@@ -114,12 +117,27 @@ btn_pesquisa.addEventListener('click', (e) => {
           </div>
           </div>`;
         }
+        /*else if (str==''){
+            titulo.innerHTML = `Nenhum resultado`;
+        }*/
         document.querySelector('#lancamentos').innerHTML = str;
+        
     }
+}
    
     });
     
 });
+
+
+input_pesquisa.addEventListener('input', () => {
+    if(input_pesquisa.value == '') {
+        lancamentos();
+    }
+});
+
+
+
 
 
 /*FIM - HOME*/
