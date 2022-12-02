@@ -82,8 +82,9 @@ btn_pesquisa.addEventListener('click', (e) => {
     .then((data) => {
       let str = '';
 
-      if(data.results.length==0) {
+      if(data.results[0].playtime==0) {
         titulo.innerHTML = `Nenhum resultado`;
+        document.querySelector('#lancamentos').innerHTML = str;
       }
       else {
       for (let i = 0; i < data.results.length; i++) {
@@ -123,7 +124,7 @@ btn_pesquisa.addEventListener('click', (e) => {
         document.querySelector('#lancamentos').innerHTML = str;
         
     }
-}
+    }
    
     });
     
